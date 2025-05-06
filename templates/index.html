@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hill Climbing TSP</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-indigo-900 text-white min-h-screen p-6">
+  <div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4 text-center">TSP con Hill Climbing</h1>
+    <div class="bg-white rounded-xl shadow-xl p-4 text-black mb-4">
+      <label class="block font-semibold mb-2">Ciudades a visitar:</label>
+      <select id="ciudades" multiple class="w-full border rounded p-2 h-40"></select>
+      <button onclick="resolver()" class="bg-purple-600 hover:bg-purple-700 text-white mt-4 px-4 py-2 rounded">Resolver Ruta</button>
+    </div>
+
+    <div id="map" class="h-[500px] rounded-xl shadow-xl"></div>
+    <div id="resultado" class="mt-4 text-center text-lg font-semibold"></div>
+  </div>
+
+  <!-- Cargar JavaScript externo -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
